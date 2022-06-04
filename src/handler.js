@@ -1,6 +1,10 @@
 const { nanoid } = require('nanoid');
 const books = require('./books');
 
+const getstart = (request, h) => {
+  return `Selamat Datang`;
+}
+
 // Menyimpan Buku
 const addBookHandler = (request, h) => {
   const {
@@ -207,6 +211,7 @@ const deleteBookByIdHandler = (request, h) => {
 };
 
 module.exports = {
+  getstart,
   addBookHandler,
   getAllBooksHandler,
   getBookByIdHandler,

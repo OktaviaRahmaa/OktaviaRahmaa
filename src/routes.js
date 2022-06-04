@@ -4,10 +4,16 @@ const {
     getAllBooksHandler, 
     getBookByIdHandler, 
     editBookByIdHandler, 
-    deleteBookByIdHandler 
+    deleteBookByIdHandler, 
+    getstart
 } = require('./handler');
 
 const routes = [
+    {
+        method: 'GET',
+        path: '/',
+        handler: getstart,
+    },
     // Menyimpan Buku
     {
         method: 'POST',
